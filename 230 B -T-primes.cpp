@@ -6,6 +6,22 @@
 #include <cmath>
 using namespace std;
 
+bool isPrime(long long n)
+{
+    if(n<=1)
+        return false;
+    if(n==2)
+        return true;
+    if(n%2==0)
+        return false;
+    for (int i = 3; i <=sqrt(n) ; i=i+2)
+    {
+        if(n%i==0)
+            return false;
+    }
+    return true;
+}
+
 int main()
 {
 
@@ -18,12 +34,9 @@ int main()
     {
         cin>>x;
         root=(long long)sqrt(x);
-        if(root*root==x)
+        if(root*root==x&& isPrime(root))
         {
-            if((root!=1&&root%2!=0)||(root==2))
-                cout<<"YES"<<endl;
-            else
-                cout<<"NO"<<endl;
+             cout<<"YES"<<endl;
         }
         else
             cout<<"NO"<<endl;
