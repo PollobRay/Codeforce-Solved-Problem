@@ -1,0 +1,29 @@
+
+    phi(n) = number of value which is co-prime with n, value<=n
+
+    phi(12) = 4
+                12 have no common divisor with 1 5 7 11 so answer is 4;
+
+
+
+    Formula:
+    --------
+
+                phi(n) = n * (1-1/p1) * (1-1/p2) * ................ *(1- 1/pk)
+                            where p is prime divisor of n
+
+
+                Example:
+                            12 = 2*2*3 so prime divisor is 2 and 3
+
+                            phi(12) =12*(1-1/2)*(1-1/3)
+                                    = 4
+
+
+    Properties:
+    -----------
+
+                1) if p is prime, phi(p)=p-1
+                2) if n=p*q where p and q is prime, phi(n)=(p-1)*(q-1)
+                3) p is prime and n is positive, phi(p^n)=p^n - p^(n-1)
+                4) a^phi(m) =1 % m

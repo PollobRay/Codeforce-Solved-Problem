@@ -1,0 +1,4 @@
+Timus does not support literal constant
+
+example:
+    M_PI     <cmath>
